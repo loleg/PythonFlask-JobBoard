@@ -4,7 +4,7 @@
     <div>
         <h1>{{ employer['name'] }}</h1>
         <div class="description">
-            <p>{{ employer['description'] }} </p>
+            <p>{{ employer['description']|markdown }} </p>
         </div>
     </div>
     <h2>Jobs</h2>
@@ -25,7 +25,7 @@
                     <strong>{{ review['title'] }}</strong>
                     <small>{{ review['status'] }}</small>
                     <small>{{ review['date'] }}</small>
-                    {{ review['review'] }}
+                    {{ review['review']|markdown }}
 
                 </p>
             <div class="content">

@@ -1,3 +1,6 @@
+db/jobs.sqlite-journal
+db/jobs.sqlite
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -51,7 +54,6 @@ coverage.xml
 # Flask stuff:
 instance/
 .webassets-cache
-db/jobs.sqlite-journal
 
 # pyenv
 .python-version

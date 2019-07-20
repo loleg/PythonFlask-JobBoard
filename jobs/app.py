@@ -1,10 +1,12 @@
 import sqlite3
 import datetime
 from flask import Flask, render_template, g, request, redirect, url_for
+from flaskext.markdown import Markdown
 
 PATH = 'db/jobs.sqlite'
 
 app = Flask(__name__)
+Markdown(app)
 
 def open_connection():
     connection = getattr(g,'_connection', None)
