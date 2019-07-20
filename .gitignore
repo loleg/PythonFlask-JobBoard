@@ -51,10 +51,13 @@ coverage.xml
 # Flask stuff:
 instance/
 .webassets-cache
+db/jobs.sqlite-journal
 
 # pyenv
 .python-version
-.venv
+.venv/
+env/
+venv/
 
 # Editors
 .vscode
@@ -62,7 +65,3 @@ instance/
 
 # macOS
 .DS_Store
-
-# Virtualenv
-venv/
-.venv/

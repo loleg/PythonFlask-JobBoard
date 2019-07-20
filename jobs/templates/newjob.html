@@ -9,20 +9,36 @@
         <input class="input" type="text" name="title" id="title" required>
       </div>
     </div>
-    <p>Make sure to mention any open datasets you use, ideally on their own line.</p>
+    <p>Make sure to mention any open datasets you are interested in, ideally on their own line.</p>
     <div class="field">
       <label class="label">Description</label>
       <div class="control">
         <textarea class="textarea" name="description" id="description" required></textarea>
       </div>
     </div>
-    <p>If you are looking to engage volunteers for this gig, please state "free" below.</p>
+    <select id="tasks">
+      <option>---</option>
+      <option>Entry of new data points, extending an existing dataset</option>
+      <option>Organize a data gathering (crowdsourcing) effort</option>
+      <option>Help with installing open hardware devices</option>
+      <option>Set up web forms for mobile data collection</option>
+      <option>Design improvements to data collection design</option>
+      <option>Aggregating data from multiple data sources</option>
+      <option>Scraping data from web pages or APIs</option>
+      <option>Explore a dataset and provide an overview</option>
+      <option>Analyze data to look for patterns or trends</option>
+      <option>Visualize data for analysis or publication</option>
+      <option>Help with publishing an open dataset</option>
+      <option>Community building, social media, meetups</option>
+    </select>
+    <p>Not sure what to ask for? &#9757; Here are some tasks (as <a href="https://github.com/loleg/earnopendata/blob/master/GUIDE.md#key-skills" target="_blank">explained here</a>) that are often requested in regards to an open data set.</p>
     <div class="field">
       <label class="label">Salary</label>
       <div class="control">
         <input class="input" type="text" name="salary" id="salary" required>
       </div>
     </div>
+    <p>If you are looking to engage volunteers for this gig, please state <b>free</b> above.</p>
     <div class="field">
       <label class="label">Is it Open Data?</label>
       <div class="control">
@@ -41,4 +57,11 @@
       </div>
     </div>
   </form>
+
+  <script>
+    document.getElementById('tasks').onchange = function(a) {
+      s = a.target.value;
+      document.getElementById('description').value += '\n' + s;
+    }
+  </script>
 {% endblock %}
