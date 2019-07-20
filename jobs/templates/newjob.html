@@ -61,7 +61,7 @@
   <script>
     document.getElementById('tasks').onchange = function(a) {
       s = a.target.value;
-      document.getElementById('description').value += '\n' + s;
+      document.getElementById('description').value += '\n- ' + s;
     }
   </script>
 {% endblock %}
