@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Post a Gig</h1>
+  <form method="post">
+    <div class="field">
+      <label class="label">Job Title</label>
+      <div class="control">
+        <input class="input" type="text" name="title" id="title" required>
+      </div>
+    </div>
+    <p>Make sure to mention any open datasets you use, ideally on their own line.</p>
+    <div class="field">
+      <label class="label">Description</label>
+      <div class="control">
+        <textarea class="textarea" name="description" id="description" required></textarea>
+      </div>
+    </div>
+    <p>If you are looking to engage volunteers for this gig, please state "free" below.</p>
+    <div class="field">
+      <label class="label">Salary</label>
+      <div class="control">
+        <input class="input" type="text" name="salary" id="salary" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Is it Open Data?</label>
+      <div class="control">
+        <input type="checkbox" checked disabled> Yes
+      </div>
+    </div>
+
+    <p><b>Note:</b> When you post your job offer, it will not be visible until approved. We will endeavor to approve new posts as soon as possible. Feel free to poke us to speed things up via GitHub or Twitter.</p>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Submit</button>
+      </div>
+      <div class="control">
+        <a href="{{ url_for('jobs') }}" class="button is-text">Cancel</a>
+      </div>
+    </div>
+  </form>
+{% endblock %}
