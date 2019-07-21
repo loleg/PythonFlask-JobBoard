@@ -5,7 +5,7 @@ This is an experimental repository to further discussion on earning an income wi
 
 Seeded at the [DB Open-Data-Hackathon Summercamp](https://dbmindbox.com/en/db-opendata-hackathons/hackathons/db-open-data-hackathon-community-summercamp-juli-2019/) in July 2019, our original idea was to create a resource to strengthen the basis for professional engagement within the open data community.
 
-See also our guide for working on open data at: **[earn-open-data](/loleg/earn-open-data)**
+See also our guide for working on open data at: **[#earnopendata](https://github.com/loleg/earnopendata)**
 
 Based on the [Build a Job Board with Python & Flask](https://github.com/pluralsight-projects/PythonFlask-JobBoard) exercise from PluralSight, as completed by [@robertmcdaniel](https://github.com/robertmcdaniel/PythonFlask-JobBoard).
 
