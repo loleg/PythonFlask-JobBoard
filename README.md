@@ -1,10 +1,17 @@
-# Build a Job Board with Python & Flask
+jobboard
+---
 
-## Verify Local Environment
+This is an experimental repository to further discussion on earning an income with open data.
+
+Seeded at the [DB Open-Data-Hackathon Summercamp](https://dbmindbox.com/en/db-opendata-hackathons/hackathons/db-open-data-hackathon-community-summercamp-juli-2019/) in July 2019, our original idea was to create a resource to strengthen the basis for professional engagement within the open data community.
+
+See also our guide for working on open data at: **[earn-open-data](/loleg/earn-open-data)**
+
+Based on the [Build a Job Board with Python & Flask](https://github.com/pluralsight-projects/PythonFlask-JobBoard) exercise from PluralSight, as completed by [@robertmcdaniel](https://github.com/robertmcdaniel/PythonFlask-JobBoard).
 
 ### Create Virtual Environment
 
-In a terminal run the following commands from the root folder of the forked project. 
+In a terminal run the following commands from the root folder of the forked project.
 
 Windows
 ```

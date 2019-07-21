@@ -1,22 +1,23 @@
 {% from '_macros.html' import show_job, show_jobs with context %}
-
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An experimental jobs board for open data projects.">
+
     <title>Job Board</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma-docs.min.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-
   </head>
-  <body>
+  <body class="layout-default">
     {% include 'nav.html' %}
-    <div class="container top">
-      <div class="content">
-        {% block content %}
-        {% endblock %}
-      </div>
-    </div>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
   </body>
+  <script src="{{ url_for('static', filename='js/bulma.js')}}"></script>
 </html>

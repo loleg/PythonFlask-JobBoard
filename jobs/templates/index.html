@@ -1,15 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
-  <div class="columns">
-    <div class="column">
+  <section class="section is-medium">
+    <div class="container">
       <h1>Open data gigs</h1>
       <p>
         Here you can find and post work offers. They are screened for applicability to the open data community. If you have any questions or issues with the job post or employer, you can respond directly inside the post. We appreciate your transparency, and tolerate your civility as per
         <a href="https://hackcodeofconduct.org/" target="_blank">The Hack Code of Conduct</a>.
       </p>
     </div>
-    <div class="column is-one-fifth">
+  </section>
+  <section class="section" id="show-jobs">
+    <div class="container">
+      {{ show_jobs(jobs)}}
     </div>
-  </div>
-  {{ show_jobs(jobs)}}
+  </section>
 {% endblock %}

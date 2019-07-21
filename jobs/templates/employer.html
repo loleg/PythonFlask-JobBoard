@@ -1,40 +1,47 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <div>
-        <h1>{{ employer['name'] }}</h1>
-        <div class="description">
-            <p>{{ employer['description']|markdown }} </p>
-        </div>
+<section class="section is-medium">
+<div class="container">
+
+    <h1>{{ employer['name'] }}</h1>
+    <div class="description">
+        <p>{{ employer['description']|markdown }} </p>
     </div>
+
+</div>
+</section>
+<section class="section" id="show-jobs">
+<div class="container">
+
     <h2>Jobs</h2>
     {{ show_jobs(jobs) }}
 
     <h2>Reviews</h2>
 
-        {%  for review in reviews %}
-        <div class="box">
-        <article class="media">
-            <div class="media-left">
-            {% for _ in range(0, review['rating']) %}
-                <span class="fa fa-star checked"></span>
-            {% endfor %}
-            </div>
-            <div class="media-content">
-                <p>
-                    <strong>{{ review['title'] }}</strong>
-                    <small>{{ review['status'] }}</small>
-                    <small>{{ review['date'] }}</small>
-                    {{ review['review']|markdown }}
-
-                </p>
-            <div class="content">
-            </div>
-            </div>
-        </article>
+    {%  for review in reviews %}
+    <div class="box">
+    <article class="media">
+        <div class="media-left">
+        {% for _ in range(0, review['rating']) %}
+            <span class="fa fa-star checked"></span>
+        {% endfor %}
         </div>
+        <div class="media-content">
+            <p>
+                <strong>{{ review['title'] }}</strong>
+                <small>{{ review['status'] }}</small>
+                <small>{{ review['date'] }}</small>
+                {{ review['review']|markdown }}
 
-        {%  endfor %}
+            </p>
+        <div class="content">
+        </div>
+        </div>
+    </article>
+    </div>
+
+    {%  endfor %}
 
     <div class="columns">
         <div class="column">
@@ -42,4 +49,7 @@
             <a href="{{ url_for('review', employer_id=employer['id']) }}" class="button is-info is-pulled-left">Write a review</a>
         </div>
     </div>
+
+</div>
+</section>
 {% endblock %}
